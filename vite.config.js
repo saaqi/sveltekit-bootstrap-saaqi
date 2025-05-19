@@ -10,7 +10,7 @@ export default defineConfig({
 		sveltekit(),
 		htmlPurge({
 			content: [
-				'./src/**/*.html',
+				'./src/app.html',
 				'./src/**/*.js',
 				'./src/**/*.svelte',
 				// --- Import only the required components.
@@ -28,7 +28,6 @@ export default defineConfig({
 				// `${bootstrap}/js/dist/toast.js`,
 				// `${bootstrap}/js/dist/tooltip.js`,
 			],
-			whitelistPatterns: [/svelte-/, /fa-icon/],
 			safelist: [/svelte-/, /modal-/],
 			defaultExtractor(content) {
 				const contentWithoutStyleBlocks = content.replace(/<style[^]+?<\/style>/gi, '');

@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		// Only runs in browser
-		const bootstrap = await import('bootstrap/js/dist/modal.js');
+		await import('bootstrap/js/dist/modal.js');
 	});
 
 	const {

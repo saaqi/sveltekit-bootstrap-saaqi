@@ -40,9 +40,9 @@ export default defineConfig({
 
 		/* ## Download Google Fonts and attach them with production build for offline use */
 		IN_PRODUCTION &&
-		webfontDownload([
-			'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'
-		]),
+			webfontDownload([
+				'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'
+			])
 	],
 
 	css: {

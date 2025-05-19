@@ -1,7 +1,8 @@
 <script>
-	import Counter from '/src/components/Counter.svelte';
-	import Logos from '/src/components/Logos.svelte';
-	import Modal from '/src/components/Modal.svelte';
+	import Counter from '$lib/components/Counter.svelte';
+	import Logos from '$lib/components/Logos.svelte';
+	import Modal from '$lib/components/Modal.svelte';
+	import Input from '$lib/components/Input.svelte';
 	import { onMount } from 'svelte';
 
 	let hrefLocation = '';
@@ -38,7 +39,7 @@
 					/>
 				</div>
 
-				<div>
+				<div class="mb-3">
 					<a
 						href="https://pagespeed.web.dev/report?url={hrefLocation}"
 						target="_blank"
@@ -48,7 +49,9 @@
 						Google PageSpeed Report
 					</a>
 				</div>
+				<Input />
 			</div>
+
 
 			<p>
 				Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation

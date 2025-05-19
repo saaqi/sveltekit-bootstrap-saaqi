@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/state';
-	import { emojis } from '../components/emojis.js';
+	import { emojis } from '$lib/components/emojis.js';
 </script>
 
 <svelte:head>

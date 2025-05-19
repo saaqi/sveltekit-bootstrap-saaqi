@@ -12,7 +12,7 @@
 	/>
 </svelte:head>
 
-<main class="svh-100 bg-dark text-bg-dark">
+<main class="svh-100">
 	<div class="container">
 		<div class="row gap-4">
 			<h1 class="h2">Welcome to SvelteKit + Bootstrap by Saaqi</h1>

@@ -1,17 +1,17 @@
 <script>
-  import { onMount } from 'svelte';
-  onMount(async () => {
-    // Only runs in browser
-    const bootstrap = await import('bootstrap/js/dist/modal.js');
-  })
+	import { onMount } from 'svelte';
+	onMount(async () => {
+		// Only runs in browser
+		const bootstrap = await import('bootstrap/js/dist/modal.js');
+	});
 
-  const {
-    btnTitle = 'Demo Modal',
-    modalTitle = 'Demo Modal title',
-    id = 'demoModal',
-    body = `Hello, I'm a modal!`
-  } = $props();
-  const idLabel = id + 'Label';
+	const {
+		btnTitle = 'Demo Modal',
+		modalTitle = 'Demo Modal title',
+		id = 'demoModal',
+		body = `Hello, I'm a modal!`
+	} = $props();
+	const idLabel = id + 'Label';
 </script>
 
 <!-- Button trigger modal -->

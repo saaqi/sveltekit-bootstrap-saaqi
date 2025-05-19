@@ -3,10 +3,7 @@
 	let count = $state(0);
 	const times = $derived(count == 1 ? 'time' : 'times');
 
-	const {
-		btnStyle = 'primary'
-	} = $props();
-
+	const { btnStyle = 'primary' } = $props();
 </script>
 
 <!-- onclick event handler is set to the increment function -->

@@ -1,34 +1,44 @@
 {
-	"name": "sveltekit-bootstrap-saaqi",
-	"private": true,
-	"version": "0.0.1",
-	"type": "module",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build --emptyOutDir",
-		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
-		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint .",
-		"build-bootstrap": "sass --no-source-map ./src/lib/styles/bs-dynamic.scss ./src/lib/styles/bootstrap.css"
-	},
-	"devDependencies": {
-		"@eslint/compat": "^1.2.9",
-		"@eslint/js": "^9.27.0",
-		"@sveltejs/adapter-auto": "^6.0.1",
-		"@sveltejs/kit": "^2.21.0",
-		"@sveltejs/vite-plugin-svelte": "^5.0.3",
-		"eslint": "^9.27.0",
-		"eslint-config-prettier": "^10.1.5",
-		"eslint-plugin-svelte": "^3.8.1",
-		"globals": "^16.1.0",
-		"prettier": "^3.5.3",
-		"prettier-plugin-svelte": "^3.4.0",
-		"sass-embedded": "^1.89.0",
-		"svelte": "^5.30.2",
-		"vite": "^6.3.5"
-	},
-	"dependencies": {
-		"bootstrap": "^5.3.6"
-	}
+  "name": "sveltekit-bootstrap-saaqi",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "format": "prettier --write .",
+    "lint": "prettier --check . && eslint .",
+    "build-bootstrap": "sass --no-source-map ./src/lib/styles/bs-dynamic.scss ./src/lib/styles/bootstrap.css"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.9",
+    "@eslint/js": "^9.27.0",
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "@sveltejs/adapter-auto": "^6.0.1",
+    "@sveltejs/kit": "^2.21.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-svelte": "^3.8.1",
+    "globals": "^16.1.0",
+    "postcss": "^8.5.3",
+    "postcss-load-config": "^6.0.1",
+    "prettier": "^3.5.3",
+    "prettier-plugin-svelte": "^3.4.0",
+    "sass-embedded": "^1.89.0",
+    "svelte": "^5.30.2",
+    "svelte-preprocess": "^6.0.3",
+    "terser": "^5.39.2",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.6"
+  },
+  "trustedDependencies": [
+    "svelte-preprocess"
+  ]
 }

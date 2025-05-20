@@ -16,6 +16,7 @@ git clone https://github.com/saaqi/sveltekit-bootstrap-saaqi.git
 Once you've created a project and installed dependencies with `bun install` (or `npm install`), start a development server:
 
 ```bash
+bun install (or `npm install`)
 bun dev (or `npm run dev`)
 ```
 
@@ -24,7 +25,7 @@ bun dev (or `npm run dev`)
 To create a production version of your app:
 
 ```bash
-bun run build
+bun run build (or `npm run build`)
 ```
 
 You can preview the production build with `bun run preview`.

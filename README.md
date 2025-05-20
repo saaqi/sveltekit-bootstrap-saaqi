@@ -1,4 +1,4 @@
-# Sveltekit With Bootstrap Starter by ssaaqi
+# Sveltekit With Bootstrap Starter
 
 Everything you need to build a Svelte project, powered by [`sveltekit`](https://svelte.dev/).
 

@@ -19,17 +19,17 @@
 	/>
 </svelte:head>
 
-<main class="svh-100">
+<main class="svh-100 py-5">
 	<div class="container">
-		<div class="row gap-4">
-			<h1 class="h2">Welcome to SvelteKit + Bootstrap by Saaqi</h1>
+		<div class="d-flex flex-column gap-3">
+			<h1 class="">Welcome to SvelteKit + Bootstrap by Saaqi</h1>
 
 			<div class="d-flex gap-5">
 				<Logos />
 			</div>
 
-			<div class="container">
-				<div class="row g-3 col-12 col-md-6">
+			<div class="col-12 col-md-6">
+				<div class="row g-2">
 					<div class="col-6">
 						<Counter btnStyle="secondary" />
 					</div>
@@ -42,7 +42,7 @@
 							body="Make muffins give attitude chase mice sweet beast under the bed all of a sudden go crazy behind the couch destroy couch intently stare at the same spot chew ipad power cord bag stretch claw drapes, leave dead animals as gifts attack feet flop over hopped up on goofballs hunt anything that moves hide when guests come over intrigued by the shower stand in front of the computer screen rub face on everything."
 						/>
 					</div>
-					<div class="col-12">
+					<div class="col-12 mb-3">
 						<a
 							href="https://pagespeed.web.dev/report?url={hrefLocation}"
 							target="_blank"
@@ -57,7 +57,6 @@
 					</div>
 				</div>
 			</div>
-
 
 			<p>
 				Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation

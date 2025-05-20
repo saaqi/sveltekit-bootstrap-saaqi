@@ -1,10 +1,7 @@
 <script>
-	let {
-		placeholder = 'Enter your text here...',
-	} = $props();
+	let { placeholder = 'Enter your text here...' } = $props();
 	let inputText = $state('');
 </script>
-
 
 <div class="mb-3">
 	<label for="exampleFormControlTextarea1" class="form-label">Insert Reactive Text Here:</label>

@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import webfontDownload from 'vite-plugin-webfont-dl';
 // import { purgeCSSPlugin } from '@fullhuman/postcss-purgecss';
-import htmlPurge from 'vite-plugin-purgecss'
+import htmlPurge from 'vite-plugin-purgecss';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 const bootstrap = 'node_modules/bootstrap';
@@ -41,9 +41,10 @@ export default defineConfig({
 		}),
 
 		/* ## Download Google Fonts and attach them with production build for offline use */
-		IN_PRODUCTION && webfontDownload([
-			'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'
-		])
+		IN_PRODUCTION &&
+			webfontDownload([
+				'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'
+			])
 	],
 
 	css: {
@@ -56,7 +57,7 @@ export default defineConfig({
 			plugins: [
 				// --- CSSNano is a modern CSS minifier based on the PostCSS ecosystem.
 				cssnano({
-					preset: ["default", { discardComments: { removeAll: true } }],
+					preset: ['default', { discardComments: { removeAll: true } }]
 				}),
 				// --- Autoprefixer is used to add vendor prefixes to CSS rules using values from "Can I Use".
 				autoprefixer

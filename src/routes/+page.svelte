@@ -2,7 +2,7 @@
 	import Counter from '$lib/components/Counter.svelte';
 	import Logos from '$lib/components/Logos.svelte';
 	import Modal from '$lib/components/Modal.svelte';
-	import Input from '$lib/components/Input.svelte';
+	import TextInput from '$lib/components/TextInput.svelte';
 	import { onMount } from 'svelte';
 
 	let hrefLocation = '';
@@ -28,28 +28,34 @@
 				<Logos />
 			</div>
 
-			<div class="mb-5 col-xl-4 col-md-6">
-				<div class="mb-3 d-flex justify-content-between gap-3">
-					<Counter btnStyle="secondary" />
-					<Modal
-						id="modal-demo"
-						btnTitle="Modal Demo"
-						modalTitle="Cat's Diary"
-						body="Make muffins give attitude chase mice sweet beast under the bed all of a sudden go crazy behind the couch destroy couch intently stare at the same spot chew ipad power cord bag stretch claw drapes, leave dead animals as gifts attack feet flop over hopped up on goofballs hunt anything that moves hide when guests come over intrigued by the shower stand in front of the computer screen rub face on everything."
-					/>
+			<div class="container">
+				<div class="row g-3 col-12 col-md-6">
+					<div class="col-6">
+						<Counter btnStyle="secondary" />
+					</div>
+					<div class="col-6">
+						<Modal
+							class="col-6"
+							id="modal-demo"
+							btnTitle="Modal Demo"
+							modalTitle="Cat's Diary"
+							body="Make muffins give attitude chase mice sweet beast under the bed all of a sudden go crazy behind the couch destroy couch intently stare at the same spot chew ipad power cord bag stretch claw drapes, leave dead animals as gifts attack feet flop over hopped up on goofballs hunt anything that moves hide when guests come over intrigued by the shower stand in front of the computer screen rub face on everything."
+						/>
+					</div>
+					<div class="col-12">
+						<a
+							href="https://pagespeed.web.dev/report?url={hrefLocation}"
+							target="_blank"
+							class="btn btn-light w-100"
+							rel="noreferrer"
+						>
+							Google PageSpeed Report
+						</a>
+					</div>
+					<div class="col-12">
+						<TextInput />
+					</div>
 				</div>
-
-				<div class="mb-3">
-					<a
-						href="https://pagespeed.web.dev/report?url={hrefLocation}"
-						target="_blank"
-						class="btn btn-light w-100"
-						rel="noreferrer"
-					>
-						Google PageSpeed Report
-					</a>
-				</div>
-				<Input />
 			</div>
 
 

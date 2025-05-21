@@ -1,14 +1,17 @@
 <script>
+	import Navigation from '$lib/components/Navigation.svelte';
 	import Counter from '$lib/components/Counter.svelte';
 	import Logos from '$lib/components/Logos.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import TextInput from '$lib/components/TextInput.svelte';
 	import { onMount } from 'svelte';
 
-	let hrefLocation = '';
+	let hrefLocation = $state('');
 	onMount(() => {
 		hrefLocation = window.location.href;
 	});
+
+	let textBoxToggle = $state(false);
 </script>
 
 <svelte:head>
@@ -19,14 +22,15 @@
 	/>
 </svelte:head>
 
-<main class="svh-100 py-5">
-	<div class="container">
+<Navigation />
+<main class="svh-100">
+	<div id="home" class="container py-2">
 		<div class="d-flex flex-column gap-3">
-			<h1 class="">Welcome to SvelteKit + Bootstrap by Saaqi</h1>
-
-			<div class="d-flex gap-5">
+			<div class="d-flex gap-5 my-4">
 				<Logos />
 			</div>
+
+			<h1>Welcome to SvelteKit + Bootstrap by Saaqi</h1>
 
 			<div class="col-12 col-md-6">
 				<div class="row g-2">
@@ -52,8 +56,17 @@
 							Google PageSpeed Report
 						</a>
 					</div>
+
 					<div class="col-12">
-						<TextInput />
+						{#if textBoxToggle}
+							<TextInput />
+						{/if}
+						<button
+							class="btn btn-{!textBoxToggle ? `secondary` : `light`}"
+							onclick={() => (textBoxToggle = !textBoxToggle)}
+						>
+							{!textBoxToggle ? 'Show' : 'Hide'} Text Input
+						</button>
 					</div>
 				</div>
 			</div>

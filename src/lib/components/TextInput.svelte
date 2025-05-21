@@ -13,7 +13,7 @@
 		rows="3"
 	></textarea>
 </div>
-<div class="inputTextOutput bg-light text-bg-light rounded-3 border-1 border-black">
+<div class="inputTextOutput bg-light text-bg-light rounded-3 border-1 border-black mb-3">
 	{inputText}
 </div>
 

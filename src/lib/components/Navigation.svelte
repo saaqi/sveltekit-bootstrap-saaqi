@@ -30,7 +30,9 @@
 	{#each navLinks as { name, href }}
 		{#if href && name}
 			<li class="nav-item text-uppercase fw-medium bg-body px-2 ps-5 ps-sm-2 rounded">
-				<a onclick={collapseBootstrapMenu} class="nav-link" href={base + href} aria-current={name}>{name}</a>
+				<a onclick={collapseBootstrapMenu} class="nav-link" href={base + href} aria-current={name}
+					>{name}</a
+				>
 			</li>
 		{/if}
 	{/each}
@@ -38,7 +40,12 @@
 
 <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top shadow-sm">
 	<div class="container px-3 py-2">
-		<a onclick={collapseBootstrapMenu} class="navbar-brand me-5" href="{base}/" aria-label="Svelte + Bootstrap by Saaqi">
+		<a
+			onclick={collapseBootstrapMenu}
+			class="navbar-brand me-5"
+			href="{base}/"
+			aria-label="Svelte + Bootstrap by Saaqi"
+		>
 			<img src={logo} class="img-fluid navLogo" alt="Svelte + Bootstrap by Saaqi" />
 		</a>
 		<button

@@ -20,7 +20,7 @@
 	<meta name="robots" content="noindex, follow" />
 </svelte:head>
 
-<div class="svh-100">
+<div class="pt-5">
 	<div id="notfound" class="container text-center py-3">
 		<div class="notfound-404">
 			<h1 class="display-4 fw-bold">OOPS! <span>{emojis[page.status] ?? emojis[500]}</span></h1>

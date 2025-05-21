@@ -3,14 +3,17 @@
 	import Logos from '$lib/components/Logos.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import TextInput from '$lib/components/TextInput.svelte';
-	import { onMount } from 'svelte';
+	// import FetchEaternalData from '$lib/components/FetchEaternalData.svelte';
 
+	import { onMount } from 'svelte';
 	let hrefLocation = $state('');
 	onMount(() => {
 		hrefLocation = window.location.href;
 	});
+	const menuJson = `https://raw.githubusercontent.com/saaqi/restaurant-mobile-app-react-native/refs/heads/main/src/menu.json`
 
 	let textBoxToggle = $state(false);
+
 </script>
 
 <svelte:head>
@@ -22,6 +25,8 @@
 </svelte:head>
 
 <div id="home" class="container py-3 py-md-5">
+	<!-- <FetchEaternalData externalJson={menuJson}/> -->
+
 	<div class="d-flex flex-column gap-3">
 		<div class="d-flex gap-5 my-3">
 			<Logos />

@@ -1,7 +1,18 @@
 <script>
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
-	import { emojis } from '$lib/components/emojis.js';
+
+	const emojis = {
+		400: '❌', // Bad Request
+		401: '🔒', // Unauthorized
+		403: '⛔', // Forbidden
+		404: '🚫', // Not Found
+		429: '🐌', // Too Many Requests (slow down)
+		500: '🤕', // Internal Server Error
+		503: '🛠️', // Service Unavailable
+		301: '➡️', // Moved Permanently
+		302: '🔁' // Found (temporary redirect)
+	};
 </script>
 
 <svelte:head>

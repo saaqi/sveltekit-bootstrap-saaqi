@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
 	import logo from '$lib/assets/logo.svg';
 	onMount(async () => {
@@ -20,7 +21,7 @@
 	{#each navLinks as { name, href }}
 		{#if href && name}
 			<li class="nav-item text-uppercase fw-medium bg-body px-2 rounded">
-				<a class="nav-link" {href} aria-current="page">{name}</a>
+				<a class="nav-link" href={base + href} aria-current={name}>{name}</a>
 			</li>
 		{/if}
 	{/each}
@@ -28,7 +29,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
 	<div class="container px-3 py-2">
-		<a class="navbar-brand me-5" href="/" aria-label="Svelte + Bootstrap by Saaqi">
+		<a class="navbar-brand me-5" href="{base}/" aria-label="Svelte + Bootstrap by Saaqi">
 			<img src={logo} class="img-fluid navLogo" alt="Svelte + Bootstrap by Saaqi" />
 		</a>
 		<button

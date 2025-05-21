@@ -20,10 +20,10 @@
 	<meta name="robots" content="noindex, follow" />
 </svelte:head>
 
-<div id="notfound">
-	<div class="notfound">
+<div class="svh-100">
+	<div id="notfound" class="container text-center py-3">
 		<div class="notfound-404">
-			<h1>Oops! <span>{emojis[page.status] ?? emojis[500]}</span></h1>
+			<h1 class="display-4 fw-bold">OOPS! <span>{emojis[page.status] ?? emojis[500]}</span></h1>
 			<h2 class="my-4">ERROR {page.status}: {page.error.message}</h2>
 		</div>
 		<p>
@@ -31,39 +31,12 @@
 			exist at all. Before you venture further, double-check the URL in your browser. If all seems
 			well, consider navigating back to our homepage to explore anew. Thanks for your understanding!
 		</p>
-		<a href="{base}/">Go To Homepage</a>
+		<a class="btn-light btn btn-lg" href="{base}/">Go To Homepage</a>
 	</div>
 </div>
 
 <style>
 	#notfound {
-		height: 100svh;
-		display: grid;
-		place-content: center;
-	}
-	.notfound {
 		max-width: 600px;
-		width: 100%;
-		text-align: center;
-	}
-	.notfound-404 h1 {
-		font-size: 4rem;
-		margin: 0 0 1rem 0;
-	}
-	.notfound p {
-		line-height: 1.5rem;
-		font-size: 1rem;
-	}
-	.notfound a {
-		font-size: 1rem;
-		text-decoration: none;
-		text-transform: uppercase;
-		background: #fefefe;
-		display: inline-block;
-		padding: 1rem 2rem;
-		border-radius: 1rem;
-		color: #333;
-		font-weight: 700;
-		box-shadow: 0 4px 15px -5px #333;
 	}
 </style>

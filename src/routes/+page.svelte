@@ -48,19 +48,19 @@
 
 				<div class="col-6">
 					<button
-						class="btn {!textBoxToggle ? `btn-success` : `btn-danger`} w-100"
+						class="btn {!textBoxToggle ? `btn-outline-light` : `btn-light`} w-100"
 						onclick={() => (textBoxToggle = !textBoxToggle)}
 					>
-						{!textBoxToggle ? 'Show' : 'Hide'} Text Input
+						{!textBoxToggle ? '✅' : '❎'} Text Input
 					</button>
 				</div>
 
 				<div class="col-6">
 					<button
-						class="btn {!loadMenu ? `btn-secondary` : `btn-danger`} w-100"
+						class="btn {!loadMenu ? `btn-outline-light` : `btn-light`} w-100"
 						onclick={() => (loadMenu = !loadMenu)}
 					>
-						{!textBoxToggle ? 'Load' : 'Unload'} External JSON
+						{!loadMenu ? '✅' : '❎'} External JSON
 					</button>
 				</div>
 

@@ -27,7 +27,7 @@
 </svelte:head>
 
 <div class="container py-5">
-	<div class="row g-5 pb-5">
+	<div class="row g-5">
 		<div class="col-md-8">
 			<article class="blog-post">
 				<h2 class="blog-post-title">Sample blog post</h2>
@@ -37,8 +37,10 @@
 						class="link-primary"
 						href="https://saqibtech.com"
 						target="_blank"
-						title="Saqib Islam - UI/UX Designer &amp; Fullstack Developer.">Saqib Islam</a
+						title="Saqib Islam - UI/UX Designer &amp; Fullstack Developer."
 					>
+						Saqib Islam
+					</a>
 				</p>
 
 				<p>
@@ -203,18 +205,18 @@
 				<div class="p-4">
 					<h4 class="fst-italic">Archives</h4>
 					<ol class="list-unstyled mb-0">
-						<li><a href="#">March 2025</a></li>
-						<li><a href="#">February 2025</a></li>
-						<li><a href="#">January 2025</a></li>
-						<li><a href="#">December 2024</a></li>
-						<li><a href="#">November 2024</a></li>
-						<li><a href="#">October 2024</a></li>
-						<li><a href="#">September 2024</a></li>
-						<li><a href="#">August 2024</a></li>
-						<li><a href="#">July 2024</a></li>
-						<li><a href="#">June 2024</a></li>
-						<li><a href="#">May 2024</a></li>
-						<li><a href="#">April 2024</a></li>
+						<li><a href="#top">March 2025</a></li>
+						<li><a href="#top">February 2025</a></li>
+						<li><a href="#top">January 2025</a></li>
+						<li><a href="#top">December 2024</a></li>
+						<li><a href="#top">November 2024</a></li>
+						<li><a href="#top">October 2024</a></li>
+						<li><a href="#top">September 2024</a></li>
+						<li><a href="#top">August 2024</a></li>
+						<li><a href="#top">July 2024</a></li>
+						<li><a href="#top">June 2024</a></li>
+						<li><a href="#top">May 2024</a></li>
+						<li><a href="#top">April 2024</a></li>
 					</ol>
 				</div>
 			</div>

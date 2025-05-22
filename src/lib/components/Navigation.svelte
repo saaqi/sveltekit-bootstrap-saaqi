@@ -38,34 +38,35 @@
 	{/each}
 {/snippet}
 
-<nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top shadow-sm">
-	<div class="container px-3 py-2">
-		<a
-			onclick={collapseBootstrapMenu}
-			class="navbar-brand me-5"
-			href="{base}/"
-			aria-label="Svelte + Bootstrap by Saaqi"
-		>
-			<img src={logo} class="img-fluid navLogo" alt="Svelte + Bootstrap by Saaqi" />
-		</a>
-		<button
-			class="navbar-toggler"
-			type="button"
-			data-bs-toggle="collapse"
-			data-bs-target="#navbarNavDropdown"
-			aria-controls="navbarNavDropdown"
-			aria-expanded="false"
-			aria-label="Toggle navigation"
-		>
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<ul class="navbar-nav gap-3 pt-lg-0 pt-3">
-				{@render navigationLinks(navLinks)}
-				<!-- <li class="nav-item dropdown">
+<header>
+	<nav class="navbar navbar-expand-sm bg-body-tertiary shadow-sm fixed-top">
+		<div class="container px-3 py-2">
+			<a
+				onclick={collapseBootstrapMenu}
+				class="navbar-brand me-5"
+				href="{base}/"
+				aria-label="Svelte + Bootstrap by Saaqi"
+			>
+				<img src={logo} class="img-fluid navLogo" alt="Svelte + Bootstrap by Saaqi" />
+			</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav gap-3 pt-lg-0 pt-3">
+					{@render navigationLinks(navLinks)}
+					<!-- <li class="nav-item dropdown">
 					<a
 						class="nav-link dropdown-toggle"
-						href="#home"
+						href="#top"
 						role="button"
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
@@ -73,19 +74,24 @@
 						Dropdown link
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#home">Action</a></li>
-						<li><a class="dropdown-item" href="#home">Another action</a></li>
-						<li><a class="dropdown-item" href="#home">Something else here</a></li>
+						<li><a class="dropdown-item" href="#top">Action</a></li>
+						<li><a class="dropdown-item" href="#top">Another action</a></li>
+						<li><a class="dropdown-item" href="#top">Something else here</a></li>
 					</ul>
-				</li> -->
-			</ul>
+					</li> -->
+				</ul>
+			</div>
 		</div>
-	</div>
-</nav>
+	</nav>
+	<div class="navSpacer"></div>
+</header>
 
 <style>
 	.navLogo {
 		width: 60px;
 		height: auto;
+	}
+	.navSpacer {
+		min-height: 80px;
 	}
 </style>

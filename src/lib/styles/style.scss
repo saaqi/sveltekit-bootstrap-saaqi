@@ -1,5 +1,5 @@
 .svh-100 {
 	align-items: center;
 	display: flex;
-	height: 100svh;
+	min-height: calc(100svh - 80px - 56px);
 }

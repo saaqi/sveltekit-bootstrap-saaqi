@@ -3,17 +3,17 @@
 	import Logos from '$lib/components/Logos.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import TextInput from '$lib/components/TextInput.svelte';
-	// import FetchEaternalData from '$lib/components/FetchEaternalData.svelte';
+	import FetchEaternalData from '$lib/components/FetchEaternalData.svelte';
+	const menuJson = `https://raw.githubusercontent.com/saaqi/restaurant-mobile-app-react-native/refs/heads/main/src/menu.json`;
+	let loadMenu = $state(false);
 
 	import { onMount } from 'svelte';
 	let hrefLocation = $state('');
 	onMount(() => {
 		hrefLocation = window.location.href;
 	});
-	const menuJson = `https://raw.githubusercontent.com/saaqi/restaurant-mobile-app-react-native/refs/heads/main/src/menu.json`
 
 	let textBoxToggle = $state(false);
-
 </script>
 
 <svelte:head>
@@ -24,9 +24,7 @@
 	/>
 </svelte:head>
 
-<div id="home" class="container py-3 py-md-5">
-	<!-- <FetchEaternalData externalJson={menuJson}/> -->
-
+<div class="container py-3 py-md-5">
 	<div class="d-flex flex-column gap-3">
 		<div class="d-flex gap-5 my-3">
 			<Logos />
@@ -50,20 +48,34 @@
 
 				<div class="col-6">
 					<button
-						class="btn btn-{!textBoxToggle ? `success` : `danger`} w-100"
+						class="btn {!textBoxToggle ? `btn-success` : `btn-danger`} w-100"
 						onclick={() => (textBoxToggle = !textBoxToggle)}
 					>
 						{!textBoxToggle ? 'Show' : 'Hide'} Text Input
 					</button>
 				</div>
 
-				<div class="col-12 mt-3">
-					{#if textBoxToggle}
-						<TextInput />
-					{/if}
+				<div class="col-6">
+					<button
+						class="btn {!loadMenu ? `btn-secondary` : `btn-danger`} w-100"
+						onclick={() => (loadMenu = !loadMenu)}
+					>
+						{!textBoxToggle ? 'Load' : 'Unload'} External JSON
+					</button>
 				</div>
+
+				{#if textBoxToggle}
+					<div class="col-12 mt-3">
+						<TextInput />
+					</div>
+				{/if}
 			</div>
 		</div>
+		{#if loadMenu}
+			<div class="col-12 mt-3">
+				<FetchEaternalData externalJson={menuJson} />
+			</div>
+		{/if}
 
 		<p>
 			Visit <a href="https://svelte.dev/docs/kit" target="_blank" rel="nofollow"

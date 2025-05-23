@@ -9,9 +9,9 @@
 </script>
 
 <LoadingAnimation />
-<Navigation />
 
-<div class="svh-100">
+<Navigation />
+<main>
 	{@render children()}
-</div>
+</main>
 <Footer />

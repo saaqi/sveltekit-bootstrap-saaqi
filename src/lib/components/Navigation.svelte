@@ -55,7 +55,10 @@
 {/snippet}
 
 <header>
-	<nav class="navbar navbar-expand-sm bg-body-tertiary shadow-sm fixed-top">
+	<nav
+		class="navbar navbar-expand-sm shadow-sm fixed-top"
+		style="background-color: rgba(var(--bs-tertiary-bg-rgb), 0.95)"
+	>
 		<div class="container px-3 py-2">
 			<a
 				onclick={collapseBootstrapMenu}
@@ -77,24 +80,8 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav gap-3 pt-lg-0 pt-3">
+				<ul class="navbar-nav gap-3">
 					{@render navigationLinks(navLinks)}
-					<!-- <li class="nav-item dropdown">
-					<a
-						class="nav-link dropdown-toggle"
-						href="#top"
-						role="button"
-						data-bs-toggle="dropdown"
-						aria-expanded="false"
-					>
-						Dropdown link
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#top">Action</a></li>
-						<li><a class="dropdown-item" href="#top">Another action</a></li>
-						<li><a class="dropdown-item" href="#top">Something else here</a></li>
-					</ul>
-					</li> -->
 				</ul>
 			</div>
 		</div>

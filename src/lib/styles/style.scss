@@ -1,5 +1,19 @@
-.svh-100 {
-	align-items: center;
+body {
+	min-height: 100svh;
 	display: flex;
-	min-height: calc(100svh - 80px - 56px);
+	flex-direction: column;
+	header {
+		width: 100%;
+	}
+	main {
+		width: 100%;
+	}
+	footer {
+		width: 100%;
+		margin-top: auto;
+	}
 }
+
+// .svh-100 {
+// 	min-height: 100svh;
+// }

@@ -24,6 +24,7 @@
 		name="description"
 		content="This template should help get you started developing with Sveltekit with bootstrap."
 	/>
+	<meta name="robots" content="noindex">
 </svelte:head>
 
 <div class="container py-5">

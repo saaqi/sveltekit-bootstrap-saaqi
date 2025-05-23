@@ -4,7 +4,6 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import TextInput from '$lib/components/TextInput.svelte';
 	import FetchEaternalData from '$lib/components/FetchEaternalData.svelte';
-	const menuJson = `https://raw.githubusercontent.com/saaqi/restaurant-mobile-app-react-native/refs/heads/main/src/menu.json`;
 	let loadMenu = $state(false);
 
 	import { onMount } from 'svelte';
@@ -72,9 +71,7 @@
 			</div>
 		</div>
 		{#if loadMenu}
-			<div class="col-12 mt-3">
-				<FetchEaternalData externalJson={menuJson} />
-			</div>
+			<FetchEaternalData />
 		{/if}
 
 		<p>

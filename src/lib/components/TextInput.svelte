@@ -1,9 +1,11 @@
 <script>
 	let { placeholder = 'Enter your text here...' } = $props();
 	let inputText = $state('');
+	// Import Transition
+	import { fade } from 'svelte/transition';
 </script>
 
-<div class="mb-3">
+<div class="mb-3" in:fade>
 	<label for="exampleFormControlTextarea1" class="form-label">Insert Reactive Text Here:</label>
 	<textarea
 		bind:value={inputText}

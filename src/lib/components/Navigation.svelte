@@ -2,6 +2,22 @@
 	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
 	import logo from '$lib/assets/logo.svg';
+
+	import { onNavigate } from '$app/navigation';
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+		// Prevent animation if navigating to the same URL
+		if (navigation.from?.url.pathname === navigation.to?.url.pathname) {
+			return;
+		}
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
+
 	onMount(async () => {
 		// Only runs in browser
 		// await import('bootstrap/js/dist/dropdown.js');
@@ -93,5 +109,45 @@
 	}
 	.navSpacer {
 		min-height: 80px;
+	}
+
+	/* Slide Trasnitions to the Navigation
+	------------------------------------ */
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation-duration: 0.2s;
+		animation-timing-function: ease-in;
+	}
+
+	/* ::view-transition-old(root) {
+		animation-name: slide-out-left;
+	} */
+
+	::view-transition-new(root) {
+		animation-name: slide-in-right;
+	}
+
+	/* Slide Out to Left */
+	/* @keyframes slide-out-left {
+		from {
+			transform: translateY(0%);
+			opacity: 1;
+		}
+		to {
+			transform: translateY(-10%);
+			opacity: 0;
+		}
+	} */
+
+	/* Slide In from Right */
+	@keyframes slide-in-right {
+		from {
+			transform: translateY(10%);
+			opacity: 0;
+		}
+		to {
+			transform: translateY(0%);
+			opacity: 1;
+		}
 	}
 </style>

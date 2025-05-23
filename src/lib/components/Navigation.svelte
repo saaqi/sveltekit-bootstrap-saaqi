@@ -80,7 +80,7 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav gap-3">
+				<ul class="navbar-nav gap-3 pt-sm-0 pt-3">
 					{@render navigationLinks(navLinks)}
 				</ul>
 			</div>

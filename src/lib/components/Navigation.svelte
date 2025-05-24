@@ -18,13 +18,6 @@
 		});
 	});
 
-	onMount(async () => {
-		// Only runs in browser
-		// await import('bootstrap/js/dist/dropdown.js');
-		await import('bootstrap/js/dist/collapse.js');
-		// await import('bootstrap/js/dist/scrollspy.js');
-	});
-
 	// Collapse Bootstrap Navigation on click
 	function collapseBootstrapMenu() {
 		const menuButton = document.querySelector('.navbar-toggler');
@@ -33,6 +26,13 @@
 		menuButton.setAttribute('aria-expanded', 'false');
 		navbarCollapse.classList.remove('show');
 	}
+
+	onMount(async () => {
+		// Only runs in browser
+		// await import('bootstrap/js/dist/dropdown.js');
+		await import('bootstrap/js/dist/collapse.js');
+		// await import('bootstrap/js/dist/scrollspy.js');
+	});
 
 	// Navigation links
 	// You can add more links here

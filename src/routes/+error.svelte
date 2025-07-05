@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
 
-	const emojis = {
+	const emojis: Record<number, string> = {
 		400: '❌', // Bad Request
 		401: '🔒', // Unauthorized
 		403: '⛔', // Forbidden
@@ -16,27 +16,34 @@
 </script>
 
 <svelte:head>
-	<title>ERROR {page.status} - {page.error.message}</title>
+	<title>ERROR {page.status} - {page.error?.message || 'Unknown Error'}</title>
 	<meta name="robots" content="noindex, follow" />
 </svelte:head>
 
-<div class="container pt-5">
-	<div id="notfound" class="container text-center py-3">
-		<div class="notfound-404">
-			<h1 class="display-4 fw-bold">OOPS! <span>{emojis[page.status] ?? emojis[500]}</span></h1>
-			<h2 class="my-4">ERROR {page.status}: {page.error.message}</h2>
+<div class="error-outer bg-body text-body">
+	<div class="container py-5">
+		<div id="notfound" class="row text-center py-3 justify-content-center gap-4">
+			<div class="notfound-404 col-12">
+				<h1 class="display-4 fw-bold">OOPS! <span>{emojis[page.status] ?? emojis[500]}</span></h1>
+				<h2 class="my-4">ERROR {page.status}: {page.error?.message || 'Unknown Error'}</h2>
+			</div>
+			<p class="col-12">
+				Uh-oh! It seems the page you're looking for has either been removed, relocated, or may not
+				exist at all. Before you venture further, double-check the URL in your browser. If all seems
+				well, consider navigating back to our homepage to explore anew. Thanks for your
+				understanding!
+			</p>
+			<div class="col">
+				<a class="btn btn-secondary" href={base + '/'}>
+					<i class="bx bx-home"></i> Go To Homepage
+				</a>
+			</div>
 		</div>
-		<p>
-			Uh-oh! It seems the page you're looking for has either been removed, relocated, or may not
-			exist at all. Before you venture further, double-check the URL in your browser. If all seems
-			well, consider navigating back to our homepage to explore anew. Thanks for your understanding!
-		</p>
-		<a class="btn-light btn btn-lg" href="{base}/">Go To Homepage</a>
 	</div>
 </div>
 
 <style>
-	#notfound {
+	.container {
 		max-width: 600px;
 	}
 </style>

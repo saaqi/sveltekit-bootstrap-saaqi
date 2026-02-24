@@ -4,7 +4,7 @@ import autoprefixer from 'autoprefixer';
 const bootstrap = 'node_modules/bootstrap';
 import { sveltekit } from '@sveltejs/kit/vite';
 const IN_PRODUCTION = process.env.NODE_ENV === 'production';
-import { purgeCSSPlugin } from '@fullhuman/postcss-purgecss';
+import purgeCSSPlugin from '@fullhuman/postcss-purgecss';
 
 export default defineConfig({
 	plugins: [

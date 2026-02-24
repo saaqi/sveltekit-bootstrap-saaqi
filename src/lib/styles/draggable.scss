@@ -1,32 +1,32 @@
 .draggableContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
 }
 .draggableItem {
-  flex: 0 0 25%;
+	flex: 0 0 25%;
 }
 
 @media (max-width: 992px) {
-  .draggableContainer {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    cursor: grab;
-    user-select: none;
+	.draggableContainer {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		cursor: grab;
+		user-select: none;
 
-    &.dragging {
-      cursor: grabbing;
-    }
-  }
-  .draggableItem {
-    flex: 0 0 48%;
-  }
+		&.dragging {
+			cursor: grabbing;
+		}
+	}
+	.draggableItem {
+		flex: 0 0 48%;
+	}
 }
 
 @media (max-width: 768px) {
-  .draggableItem {
-    flex: 0 0 95%;
-  }
+	.draggableItem {
+		flex: 0 0 95%;
+	}
 }

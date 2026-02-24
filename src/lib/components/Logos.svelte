@@ -28,7 +28,7 @@
 
 <!-- This block iterates over an array of logoLinks and generates an anchor (<a>) element for each item. -->
 {#each logoLinks as { link, src, alt, className }, index ('logo#' + index)}
-	<a href={link} target="_blank" rel="noreferrer">
+	<a href={link} target="_blank" rel="noreferrer noopener nofollow external">
 		<img {src} {alt} class="logo {className}" height="50" />
 	</a>
 {/each}

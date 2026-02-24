@@ -22,7 +22,7 @@ const config = {
 			// If you are using GitHub Pages, set the base path to your repository name.
 			/* For example, if your repository is named "sveltekit-bootstrap-saaqi",
 			 	  set the base path to "/sveltekit-bootstrap-saaqi". */
-			base: '/sveltekit-bootstrap'
+			base: '/sveltekit-bootstrap-saaqi'
 		}
 	}
 };

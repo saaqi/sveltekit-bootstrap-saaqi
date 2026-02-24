@@ -1,5 +1,5 @@
 <script>
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import { onMount } from 'svelte';
 	import logo from '$lib/assets/logo.svg';
 
@@ -42,11 +42,11 @@
 	];
 </script>
 
-{#snippet navigationLinks(name, href)}
-	{#each navLinks as { name, href }}
+{#snippet navigationLinks()}
+	{#each navLinks as { name, href } (href)}
 		{#if href && name}
 			<li class="nav-item text-uppercase fw-medium bg-body px-2 ps-5 ps-sm-2 rounded">
-				<a onclick={collapseBootstrapMenu} class="nav-link" href={base + href} aria-current={name}
+				<a onclick={collapseBootstrapMenu} class="nav-link" href={resolve(href)} aria-current={name}
 					>{name}</a
 				>
 			</li>
@@ -63,7 +63,7 @@
 			<a
 				onclick={collapseBootstrapMenu}
 				class="navbar-brand me-5"
-				href="{base}/"
+				href={resolve('/')}
 				aria-label="Svelte + Bootstrap by Saaqi"
 			>
 				<img src={logo} class="img-fluid navLogo" alt="Svelte + Bootstrap by Saaqi" />

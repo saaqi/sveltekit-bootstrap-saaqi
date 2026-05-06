@@ -1,6 +1,6 @@
-# Sveltekit With Bootstrap Starter
+# Astro With Bootstrap Starter
 
-Everything you need to build a Svelte project, powered by [`sveltekit`](https://svelte.dev/).
+Everything you need to build a Astro project, powered by [`Astro`](https://astro.build/).
 
 ## Creating a project
 
@@ -13,11 +13,11 @@ git clone https://github.com/saaqi/sveltekit-bootstrap-saaqi.git
 
 ## Developing
 
-Once you've created a project and installed dependencies with `bun install` (or `npm install`), start a development server:
+Once you've created a project and installed dependencies with `pnpm install`, start a development server:
 
 ```bash
-bun install (or `npm install`)
-bun dev (or `npm run dev`)
+pnpm install
+pnpm dev
 ```
 
 ## Building
@@ -25,9 +25,9 @@ bun dev (or `npm run dev`)
 To create a production version of your app:
 
 ```bash
-bun run build (or `npm run build`)
+pnpm run build
 ```
 
-You can preview the production build with `bun run preview`.
+You can preview the production build with `pnpm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Created and maintained by [Saqib Islam](https://saqibtech.com 'Saqib Islam - UI/UX Designer & Full-stack Web Developer.')

@@ -11,7 +11,7 @@
 		"build-bootstrap": "sass --no-source-map ./src/lib/styles/bs-dynamic.scss ./src/lib/styles/bootstrap.css",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json && pnpm run lint",
+		"check": "svelte-kit sync && svelte-check && pnpm run lint",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint ."
 	},
@@ -33,6 +33,7 @@
 		"prettier-plugin-svelte": "^3.5.1",
 		"sass-embedded": "^1.99.0",
 		"svelte": "^5.55.5",
+		"svelte-check": "^4.4.8",
 		"terser": "^5.46.2",
 		"vite": "^8.0.10",
 		"vite-plugin-webfont-dl": "^3.12.0"

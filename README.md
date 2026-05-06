@@ -1,6 +1,6 @@
-# Astro With Bootstrap Starter
+# Sveltekit With Bootstrap Starter
 
-Everything you need to build a Astro project, powered by [`Astro`](https://astro.build/).
+Everything you need to build a Svelte project, powered by [`Sveltekit`](https://svelte.dev/).
 
 ## Creating a project
 
